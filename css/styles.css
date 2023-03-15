@@ -49,7 +49,9 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+@media screen {
+  
+}
 .body {
   background: rgb(255, 255, 255);
   color: var(--primary-text-color);
@@ -170,9 +172,10 @@ a.current::after {
 /* ===MAIN=== */
 
 /* ==Hero Section== */
+
 .hero {
-  max-width: 1440px;
-  max-height: 600px;
+  max-width: 428px;
+  max-height: 432px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--title-text-color);
@@ -186,17 +189,46 @@ a.current::after {
       rgba(46, 47, 66, 0.7)
     ),
     url(../Images/hero/people-office\ 1.jpg);
-  padding-top: 192px;
-  padding-bottom: 292px;
+  padding-top: 112px;
+  padding-bottom: 240px;
   text-align: center;
 }
 
-.hero-title {
+@media (min-width: 767.98px) {
+.hero
+{max-width: 768px;
+  max-height: 436px;
+  padding-top: 112px;
+  padding-bottom: 204px;
+}
+}
+
+@media (min-width: 1199.98px) {
+.hero
+{max-width: 1440px;
+  max-height: 600px;
+  padding-top: 188px;
+  padding-bottom: 292px;
+}
+}
+
+/* .hero-title {
   color: rgb(255, 255, 255);
   font-weight: 900;
   font-size: 56px;
   line-height: 1.07;
   max-width: 492px;
+  display: block;
+  margin: auto;
+  margin-bottom: 48px;
+} */
+
+.hero-title {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  max-width: 320px;
   display: block;
   margin: auto;
   margin-bottom: 48px;
