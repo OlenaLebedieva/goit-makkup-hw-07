@@ -44,14 +44,28 @@ img {
 
 /* ==General box-container for all section== */
 .container {
-  max-width: 1158px;
+  max-width: 428px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 767.98px){
+.container {
+  max-width: 736px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+}
+
+@media (min-width: 1199.98px){
+  .container {
+  max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen {
-  
 }
+
 .body {
   background: rgb(255, 255, 255);
   color: var(--primary-text-color);
@@ -209,19 +223,22 @@ a.current::after {
   max-height: 600px;
   padding-top: 188px;
   padding-bottom: 292px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--title-text-color);
+  background-image: url(../Images/hero/people-office\ 1.jpg);
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../Images/hero/people-office\ 1.jpg);
+  text-align: center;
 }
 }
-
-/* .hero-title {
-  color: rgb(255, 255, 255);
-  font-weight: 900;
-  font-size: 56px;
-  line-height: 1.07;
-  max-width: 492px;
-  display: block;
-  margin: auto;
-  margin-bottom: 48px;
-} */
 
 .hero-title {
   color: rgb(255, 255, 255);
@@ -231,16 +248,36 @@ a.current::after {
   max-width: 320px;
   display: block;
   margin: auto;
+  margin-bottom: 72px;
+}
+
+@media (min-width: 767.98px) {
+.hero
+{font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  max-width: 496px;
   margin-bottom: 48px;
+}
+}
+
+@media (min-width: 1199.98px) {
+.hero
+{font-weight: 900;
+  font-size: 56px;
+  line-height: 1.07;
+  max-width: 496px;
+  margin-bottom: 36px;
+}
 }
 
 .hero-button {
   color: var(--accent-text-color);
-  min-width: 170px;
+  min-width: 169px;
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.5;
   align-items: center;
   letter-spacing: 0.04em;
   background-color: var(--brand-text-color);
@@ -249,7 +286,6 @@ a.current::after {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 16px 32px;
-
   transition: background-color var(--transition);
 }
 
@@ -471,7 +507,20 @@ a.current::after {
   background-color: var(--button-accent-color);
 }
 
-/* ==Benefit Section== */
+
+/* ==Для всіх секцій== */
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media (min-width: 1199.98px) {
+.section {
+  padding-top: 120px;
+  padding-bottom: 96px;
+}
+}
 
 .visually-hidden {
   position: absolute;
@@ -486,16 +535,20 @@ a.current::after {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* ==Для всіх секцій== */
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+
+/* ==Benefit Section== */
+
+.benefit-section {
+  padding-top: 96px;
 }
 
-/* ==Для іконок== */
-
-.benefit-icon {
+@media (min-width: 1200px) {
+.benefit-section {
+  padding-top: 120px;
+}
+}
+.benefit-icon{
   width: 64px;
   height: 64px;
 }
@@ -513,8 +566,11 @@ a.current::after {
   margin-bottom: 8px;
 }
 
-.benefit-section {
-  padding-top: 120px;
+@media (max-width: 767.98px){
+.benefit-icon,
+.benefit-pictures {
+  display: none;
+}
 }
 
 .benefit-list {
